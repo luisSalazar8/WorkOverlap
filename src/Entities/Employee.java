@@ -33,5 +33,7 @@ public class Employee {
 		this.schedule.put(schedule.getDay(), schedule);
 	}
 	
-	
+	public String toString() {
+		return "Name: "+this.name+", Scheduler: "+this.schedule;
+	}
 }

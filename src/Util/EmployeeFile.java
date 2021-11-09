@@ -50,8 +50,8 @@ public class EmployeeFile {
 			try {
 				start = Time.textToDate(day.substring(2,7));
 				end = Time.textToDate(day.substring(8));
-				Schedule sched = new Schedule(day, start, end);
-				employee.add_Schedule(sched);;
+				Schedule sched = new Schedule(d, start, end);
+				employee.add_Schedule(sched);
 			} catch (ParseException e) {
 				// TODO Auto-generated catch block
 				System.out.println("Error in the date");
