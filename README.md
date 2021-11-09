@@ -48,4 +48,18 @@ The output should be a table with the first column being the pair of employees t
  * The counter of times the employee pairs where in the same time frame.
  
  These tests use both of the file that were previously mentioned.
+ 
 ## Strategy
+
+ My approach was to first analyze the data that the example files contained to find out two things: the different types of data that I would have to work with and if I could group them into entities or objects. This way I conluded that I could work with two objects: Schedule and Employee. The schedule consists of the name of the day, the start hour and end hour. The Employee consists of a name and a collection of related Schedules. The clases for these objects can be found in the Entities package.
+ 
+ The next thing to do was to divide the flow of the project into steps:
+ * First: recieve the input of the user in the console
+ * Second: open and read the file line by line. The result should be a list of employees.
+ * Third: use the text line to create the Employee and the Schedule. 
+ * Fourth: from the list of employees, compare everyone to get the table.
+ * Fifth: print the table to the console.
+ 
+ Then I organized the logic in scripts following an MVC arquitecture. The main script works as the interface/view managing the console, receiving the input from the user and presenting the messages. The script called EmployeeFile works as the controller having all the business logic of reading the file, creating the objects and making the comparisons between employees. Finally, the models would be the clases inside the Entities package that describe the Employee and Schedule.
+ 
+ 
