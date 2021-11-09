@@ -36,5 +36,16 @@ The output should be a table with the first column being the pair of employees t
   
   ![image](https://user-images.githubusercontent.com/33677423/140981990-c437f896-ccd0-48eb-b1e8-d5e5fb5f5b06.png)
 
-  
+## Tests
+ Inside the project there are two example files that can be use to test the application:
+ * Schedule.txt: inside the Main package
+ * Example2.txt: inside the Tests package
+ 
+ The automatic testing is executed using the JUnit library. The script that contains all the tests is called EmployeeOverlap.java and is inside the Tests Package.
+ It checks these aspects of the result:
+ * The amount of employees from the file.
+ * The amount of employee pairs from the overlap.
+ * The counter of times the employee pairs where in the same time frame.
+ 
+ These tests use both of the file that were previously mentioned.
 ## Strategy
