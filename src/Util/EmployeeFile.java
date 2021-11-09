@@ -20,6 +20,7 @@ public class EmployeeFile {
 		
 		File file = new File(fileName);
 		LinkedList<Employee> employeeList = new LinkedList<Employee>();
+		
         try (BufferedReader br = new BufferedReader(new FileReader(file)))
         {
             String line;
@@ -43,10 +44,12 @@ public class EmployeeFile {
 		String name = arguments[0];
 		Employee employee = new Employee(name);
 		String[] schedule = arguments[1].split(",");
+		
 		for (String day :schedule) {
 			String d = day.substring(0,2);
 			Date start;
 			Date end;
+			
 			try {
 				start = Time.textToDate(day.substring(2,7));
 				end = Time.textToDate(day.substring(8));
@@ -75,7 +78,9 @@ public class EmployeeFile {
 		@SuppressWarnings("unchecked")
 		LinkedList<Employee> employeesList2 = (LinkedList<Employee>) employeesList.clone(); 
 		employeesList2.removeFirst();
+		
 		for(Employee employee : employeesList) {
+			
 			for(Employee employee2 : employeesList2) {
 				
 				for(String day : employee.getSchedule().keySet()) {
@@ -100,6 +105,7 @@ public class EmployeeFile {
 				
 				
 			}
+			
 			if(employeesList2.size()>0) {
 				employeesList2.removeFirst();
 			}
